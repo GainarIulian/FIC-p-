@@ -1,3 +1,9 @@
 span{
     color: #ffd001
 }
+.crop {
+    overflow: hidden;
+}
+div {
+    cursor: pointer;
+}
