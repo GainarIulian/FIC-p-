@@ -9,9 +9,9 @@ import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core
 
 export class StarColumn implements OnChanges {
 
-    @Input() rating: number;
+    @Input() rating = 0;
     @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
-    starWidth: number;
+    starWidth = 0;
 
     onClick(): void {
         this.ratingClicked.emit(`Stars: ${this.rating}`)
