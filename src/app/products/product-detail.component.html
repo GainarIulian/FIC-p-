@@ -5,11 +5,37 @@
     </div>
     
     <!-- Body card -->
-    <div class="car-body">
-        <div>
-            Test
-        </div>
-        <div class="text-left">
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <div class='row'>
+                    <div class='col-md-4'>Name:</div>
+                    <div class='col-md-8'>{{product.name}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Code:</div>
+                    <div class='col-md-8'>{{product.code | lowercase | convertToSpaces: '-'}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Description:</div>
+                    <div class='col-md-8'>{{product.description}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Availability:</div>
+                    <div class='col-md-8'>{{product.releaseDate}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Price:</div>
+                    <div class='col-md-8'>{{product.price|currency:'USD':'symbol'}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>5 Star Rating:</div>
+                    <div class='col-md-8'>
+                    <star-column [rating]='product.rating' (ratingClicked)='onRatingClicked($event)'>                        
+                    </star-column>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
